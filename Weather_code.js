@@ -12,7 +12,7 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // Declaring API_KE
-const API_KEY ='49cc8c821cd2aff9af04c9f98c36eb74';
+const API_KEY ='5570104105731cf84518cdf3b9ec4f87';
 
 // Function to get weather data and accesss current location of user
 setInterval(() => {
