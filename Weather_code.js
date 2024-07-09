@@ -6,15 +6,14 @@ const timezone = document.getElementById('time-zone');
 const countryEl = document.getElementById('country');
 const weatherForecastEl = document.getElementById('weather-forecast');
 const currentTempEl = document.getElementById('current-temp');
-const FIXED_LATITUDE = 40.7128;
-const FIXED_LONGITUDE = -74.0060;
+
 
 // Declaring array for months and days
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Saturday']
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // Declaring API_KE
-const API_KEY ='5570104105731cf84518cdf3b9ec4f87';
+const API_KEY ='39ccf6acaae34a1e85c203919240907';
 
 // Function to get weather data and accesss current location of user
 setInterval(() => {
@@ -42,7 +41,7 @@ function getWeatherData () {
         
         let {latitude, longitude } = success.coords;
 
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
+        fetch(`https://api.weatherapi.com/v1/current.json?key=39ccf6acaae34a1e85c203919240907&q=MARRAKECH`).then(res => res.json()).then(data => {
 
         console.log(data)
         showWeatherData(data);
