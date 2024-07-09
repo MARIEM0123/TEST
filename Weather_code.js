@@ -6,6 +6,8 @@ const timezone = document.getElementById('time-zone');
 const countryEl = document.getElementById('country');
 const weatherForecastEl = document.getElementById('weather-forecast');
 const currentTempEl = document.getElementById('current-temp');
+const FIXED_LATITUDE = 40.7128;
+const FIXED_LONGITUDE = -74.0060;
 
 // Declaring array for months and days
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -34,11 +36,13 @@ setInterval(() => {
 // Function to have the location
 getWeatherData()
 function getWeatherData () {
+    let latitude = FIXED_LATITUDE;
+    let longitude = FIXED_LONGITUDE;
     navigator.geolocation.getCurrentPosition((success) => {
         
         let {latitude, longitude } = success.coords;
 
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
 
         console.log(data)
         showWeatherData(data);
