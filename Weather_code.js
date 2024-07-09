@@ -10,7 +10,7 @@ const FIXED_LATITUDE = 40.7128;
 const FIXED_LONGITUDE = -74.0060;
 
 // Declaring array for months and days
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Saturday']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // Declaring API_KE
