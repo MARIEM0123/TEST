@@ -13,7 +13,7 @@ const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // Declaring API_KE
-const API_KEY ='39ccf6acaae34a1e85c203919240907';
+const API_KEY ='073f2e23ea0af54688619b3f4bdf3494';
 
 // Function to get weather data and accesss current location of user
 setInterval(() => {
@@ -41,7 +41,7 @@ function getWeatherData () {
         
         let {latitude, longitude } = success.coords;
 
-        fetch(`https://api.weatherapi.com/v1/current.json?key=39ccf6acaae34a1e85c203919240907&q=MARRAKECH`).then(res => res.json()).then(data => {
+        fetch(`https://api.weatherapi.com/v1/current.json?key=073f2e23ea0af54688619b3f4bdf3494=MARRAKECH`).then(res => res.json()).then(data => {
 
         console.log(data)
         showWeatherData(data);
